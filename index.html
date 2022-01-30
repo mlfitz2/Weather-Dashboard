@@ -12,6 +12,40 @@
 </head>
 <body>
 
+    <header>
+        <div class="container text-center p-3">
+            <h1>WEATHER DASHBOARD</h1>
+        </div>
+    </header>
+
+    <main>
+
+        <!--Section for searching cities and viewing list of saved cities-->
+        <section id="search-area" class="p-2">
+            <form class="container text-center">
+                <label>Enter City Below</label>
+                <div class="d-flex">
+                    <input type="text" class="form-control" id="city-input">
+                    <button type="submit" class="btn btn-primary m-2 fas fa-search-location"></button>
+                </div>
+            </form>
+            <ul id="saved-cities-area">
+                <!--Locally-stored saved cities go here-->
+            </ul>
+        </section>
+
+        <!--Weather forecasts go here-->
+        <section id="results-area" class="flex-col text-center p-2">
+            <div id="current-weather-area">
+
+            </div>
+            <div id="forecast-area" class="text-center p-2">
+
+            </div>
+        </section>
+
+        <div id="test-text"></div>
+    </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>

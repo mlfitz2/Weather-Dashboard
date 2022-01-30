@@ -1,0 +1,28 @@
+:root {
+   --darkblue: #252d49;
+   --lightgreen: #e5faad; 
+}
+
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    background-color: var(--darkblue);
+    color: var(--lightgreen);
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+#search-area {
+    width: 25%;
+    background-color: var(--lightgreen);
+    color: var(--darkblue);
+}
+
+#results-area {
+    width: 75%;
+}
