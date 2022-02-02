@@ -25,4 +25,12 @@ main {
 
 #results-area {
     width: 75%;
+    display: flex;
+    flex-direction: column;
+}
+
+#forecast-area {
+    display: flex;
+    
+    flex-direction: row;
 }
