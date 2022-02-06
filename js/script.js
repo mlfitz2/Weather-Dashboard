@@ -6,7 +6,7 @@ async function searchWeather(cityName) {
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=d91f911bcf2c0f925fb6535547a5ddc9&units=imperial`
     let response = await fetch(apiUrl);
     let res = await response.json();
-    console.log(res);
+
 
     let cardArea = document.getElementById('current-weather-area');
     let tempEl = document.createElement('p');
@@ -34,9 +34,29 @@ async function searchForecast(cityName) {
     let forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=979a65fd5e03b76d473b58f3098b3af0&units=imperial`;
     let response = await fetch(forecastUrl);
     let res = await response.json();
-    console.log(res);
 
-    for ( i = 2; i < 40; i+=8) {
+
+    let thisHour = moment().format("h a");
+    let x = '';
+    if (thisHour > '09 pm') {
+        x = 1;
+    } else if (thisHour <= '09 pm' && thisHour > '06 pm') {
+        x = 2;
+    } else if (thisHour <= '06 pm' && thisHour > '03 pm') {
+        x = 3;
+    } else if (thisHour <= '03 pm' && thisHour > '12 pm') {
+        x = 4;
+    } else if (thisHour <= '12 pm' && thisHour > '09 am') {
+        x = 5;
+    } else if (thisHour <= '09 am' && thisHour > '06 am') {
+        x = 6;
+    } else if (thisHour <= '06 am' && thisHour > '03 am') {
+        x = 7;
+    } else {
+        x = 8;
+    }
+    console.log(thisHour);    
+    for ( i = x; i < 40; i+=8) {
         let forecastArea = document.getElementById('forecast-area');
         let forecastCard = document.createElement('div');
         forecastCard.setAttribute('class', 'forecast-card');
@@ -53,7 +73,9 @@ async function searchForecast(cityName) {
         windSpeedEl.textContent = `Wind Speed: ${res.list[i].wind.speed} mph`;
         dateEl.textContent = `Date: ${res.list[i].dt_txt}`;
 
-        imgEl.src = `https://openweathermap.org/img/w/${res.list[i].weather.icon}.png`
+        imgEl.src = `https://openweathermap.org/img/w/${res.list[i].weather[0].icon}.png`
+        console.log(res.list[0].weather[0].icon)
+
 
         dateEl.append(imgEl);
     

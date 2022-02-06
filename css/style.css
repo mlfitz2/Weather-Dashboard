@@ -31,6 +31,8 @@ main {
 
 #current-weather-area {
     background-color: var(--lightgreen);
+    font-weight: bold;
+    margin-bottom: solid 5px var(--darkblue);
 }
 
 #forecast-area {
