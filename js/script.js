@@ -36,7 +36,7 @@ async function searchForecast(cityName) {
     let res = await response.json();
     console.log(res);
 
-    for ( i = 0; i < 5; i++) {
+    for ( i = 2; i < 40; i+=8) {
         let forecastArea = document.getElementById('forecast-area');
         let forecastCard = document.createElement('div');
         forecastCard.setAttribute('class', 'forecast-card');
@@ -45,17 +45,19 @@ async function searchForecast(cityName) {
         let windSpeedEl = document.createElement('p');
         let nameEl = document.createElement('h3');
         let imgEl = document.createElement('img');
+        let dateEl = document.createElement('p');
     
         nameEl.textContent = `${res.city.name}`;
         tempEl.textContent = `Temp: ${res.list[i].main.temp} °F`;
         humidityEl.textContent = `Humidity: ${res.list[i].main.humidity}%`;
         windSpeedEl.textContent = `Wind Speed: ${res.list[i].wind.speed} mph`;
+        dateEl.textContent = `Date: ${res.list[i].dt_txt}`;
 
-        // imgEl.src = `https://openweathermap.org/img/w/${res.weather[0].icon}.png`
+        imgEl.src = `https://openweathermap.org/img/w/${res.list[i].weather.icon}.png`
 
-        // nameEl.append(imgEl);
+        dateEl.append(imgEl);
     
-        forecastCard.append(nameEl, tempEl, humidityEl, windSpeedEl);
+        forecastCard.append(dateEl, tempEl, humidityEl, windSpeedEl);
         forecastArea.append(forecastCard);
 
     }
