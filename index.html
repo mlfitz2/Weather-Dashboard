@@ -25,8 +25,8 @@
             <form class="container text-center">
                 <label>Enter City Below</label>
                 <div class="d-flex">
-                    <input type="text" class="form-control" id="city-input">
-                    <button type="submit" id="search-button" class="btn btn-primary m-2 fas fa-search-location"></button>
+                    <input type="text" name="city-search-input" class="form-control" id="city-input">
+                    <input type="submit" id="search-button" class="btn btn-primary m-2 fas fa-search-location"></input>
                 </div>
             </form>
             <ul id="saved-cities-area">
@@ -37,9 +37,11 @@
         <!--Weather forecasts go here-->
         <section id="results-area" class="flex-col text-center p-2">
             <div id="current-weather-area">
+                <h2 class="section-header">Current Weather:</h2>
 
             </div>
             <div id="forecast-area" class="text-center p-2">
+                <h2 class="section-header">5-Day Forecast:</h2>
 
             </div>
         </section>

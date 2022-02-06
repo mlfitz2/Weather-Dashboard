@@ -39,6 +39,7 @@ async function searchForecast(cityName) {
     for ( i = 0; i < 5; i++) {
         let forecastArea = document.getElementById('forecast-area');
         let forecastCard = document.createElement('div');
+        forecastCard.setAttribute('class', 'forecast-card');
         let tempEl = document.createElement('p');
         let humidityEl = document.createElement('p');
         let windSpeedEl = document.createElement('p');
@@ -64,11 +65,14 @@ async function searchForecast(cityName) {
 
 
 
+document.getElementById('search-button').addEventListener('click', function(event) {
+    event.preventDefault();
+    let myCity = document.getElementById('city-input');
+    searchWeather(myCity.value);
+    searchForecast(myCity.value);
+})
 
 
-
-searchWeather('seattle')
-searchForecast('seattle')
 
     
 

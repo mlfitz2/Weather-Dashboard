@@ -29,8 +29,25 @@ main {
     flex-direction: column;
 }
 
+#current-weather-area {
+    background-color: var(--lightgreen);
+}
+
 #forecast-area {
     display: flex;
-    
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: var(--lightgreen);
+}
+
+.forecast-card {
+    background-color: var(--darkblue);
+    padding: 2%;
+    border: solid var(--lightgreen) 5px;
+    color: white;
+}
+
+.section-header {
+    width: 100%;
 }
