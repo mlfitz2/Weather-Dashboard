@@ -23,6 +23,18 @@ main {
     color: var(--darkblue);
 }
 
+.saved-city {
+    background-color: var(--darkblue);
+    text-align: center;
+    color: var(--lightgreen);
+    padding: 5%;
+    margin: 2%;
+}
+
+.saved-city:hover {
+    cursor: pointer;
+}
+
 #results-area {
     width: 75%;
     display: flex;
