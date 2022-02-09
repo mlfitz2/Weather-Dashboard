@@ -17,6 +17,6 @@ The site does not display the UV Index, although this was in the user story. Thi
 
 Screenshots:
 
-![Screenshot-1] (./screenshots/before-searching.JPG "Upon loading page")
-![Screenshot-2] (./screenshots/weather-data.JPG "Displaying weather info")
-![Screenshot-3] (./screenshots/more-cities-saved.JPG "Multiple cities saved in history")
+![Screenshot-1](./screenshots/before-searching.JPG "Upon loading page")
+![Screenshot-2](./screenshots/weather-data.JPG "Displaying weather info")
+![Screenshot-3](./screenshots/more-cities-saved.JPG "Multiple cities saved in history")
