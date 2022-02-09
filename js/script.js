@@ -73,6 +73,9 @@ function saveCity() {
 //Display cities that have been searched
 function getCityList() {
     let savedList = JSON.parse(localStorage.getItem('savedCities'));
+    if (savedList == null) {
+        savedList = [];
+    }
     savedList.forEach(element => {
         let newCity = document.createElement('li');
         newCity.textContent = element.toUpperCase();
@@ -81,7 +84,7 @@ function getCityList() {
         let citiesList = document.getElementById('saved-cities-area');
         citiesList.append(newCity);
         
-        //User can click on saved city to get updated forecast
+        //User can click on saved city to get updated
         newCity.addEventListener('click', function(){
             let savedCity = this.textContent;
             console.log(savedCity);

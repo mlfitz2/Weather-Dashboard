@@ -60,6 +60,7 @@ main {
     padding: 2%;
     border: solid var(--lightgreen) 5px;
     color: white;
+    width: 18%;
 }
 
 .section-header {
